@@ -46,7 +46,7 @@ export default function RootLayout({
           </div>
         </nav>
         <div className="flex min-h-screen flex-col bg-zinc-50 font-sans dark:bg-black">
-          <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-content py-32 px-16 bg-white dark:bg-black sm:items-start mx-auto">
+          <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-content py-16 px-16 bg-white dark:bg-black sm:items-start mx-auto">
             {children}
           </main>
         </div>
