@@ -163,41 +163,17 @@ export default function About() {
 									<strong>Gaming</strong> &mdash; {content.hobbyGaming}
 								</div>
 							</li>
+							<div className="w-full flex justify-center mt-2 sm:mt-4">
+								<Slideshow
+									images={[
+										"/knkf-logo2.png",
+										"/rocket-league-logo2.png",
+										"/bg3-logo.png",
+										"/dnd-logo.png",
+									]}
+								/>
+							</div>
 						</ul>
-					</div>
-				</li>
-				{/* Hobbies */}
-				<li className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 sm:p-6 flex flex-col items-center gap-4 sm:gap-6">
-					<div className="w-full">
-						<h2 className="text-xl font-bold mb-4 text-center">
-							{content.hobbiesHeader}
-						</h2>
-						<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-							<div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-3 flex flex-col items-center text-center">
-								<strong>Powerlifting</strong>
-								<span className="text-sm mt-1">
-									{content.hobbyPowerlifting}
-								</span>
-							</div>
-							<div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-3 flex flex-col items-center text-center">
-								<strong>Dungeons &amp; Dragons</strong>
-								<span className="text-sm mt-1">{content.hobbyDnD}</span>
-							</div>
-							<div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-3 flex flex-col items-center text-center">
-								<strong>Gaming</strong>
-								<span className="text-sm mt-1">{content.hobbyGaming}</span>
-							</div>
-						</div>
-						<div className="w-full flex justify-center mt-2 sm:mt-4">
-							<Slideshow
-								images={[
-									"/knkf-logo2.png",
-									"/rocket-league-logo2.png",
-									"/bg3-logo.png",
-									"/dnd-logo.png",
-								]}
-							/>
-						</div>
 					</div>
 				</li>
 			</ul>
