@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import LanguageSelect from "../../components/LanguageSelect/LanguageSelect";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import { en } from "../../constants/en";
 import type { Language } from "../../constants/language.types";
 import { nl } from "../../constants/nl";
+import { PROJECT_LINKS } from "../../constants/project-links";
 
 export default function Home() {
   const [lang, setLang] = useState<Language>("en");
@@ -16,38 +18,23 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100">
             {content.h1}
           </h1>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              className={`px-3 py-1 rounded bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition${lang === "nl" ? " font-bold" : ""}`}
-              onClick={() => setLang("nl")}
-            >
-              🇳🇱
-            </button>
-            <button
-              type="button"
-              className={`px-3 py-1 rounded bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium hover:bg-zinc-300 dark:hover:bg-zinc-700 transition${lang === "en" ? " font-bold" : ""}`}
-              onClick={() => setLang("en")}
-            >
-              🇺🇸
-            </button>
-          </div>
+          <LanguageSelect lang={lang} setLang={setLang} />
         </div>
         <ul className="space-y-4 w-full">
           <ProjectItem
-            href={"https://dionaidan.vercel.app/"}
+            href={PROJECT_LINKS.KNKF}
             title={content.knkfTitle}
             description={content.knkfDescription}
             tags={["React", "Next.js", "Python"]}
           />
           <ProjectItem
-            href="https://dionaidan-draw-app.vercel.app/"
+            href={PROJECT_LINKS.DRAW_SOMETHING}
             title={content.drawSomethingTitle}
             description={content.drawSomethingDescription}
             tags={["React", "Next.js"]}
           />
           <ProjectItem
-            href="http://localhost:3000"
+            href={PROJECT_LINKS.PORTFOLIO}
             title={content.portfolioTitle}
             description={content.portfolioDescription}
             tags={["React", "Next.js"]}
