@@ -16,7 +16,7 @@ export default function About() {
 				{/* Education */}
 				<li className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 sm:p-6 flex flex-col md:flex-row items-center gap-4 sm:gap-6">
 					<div className="flex-1">
-						<h2 className="text-xl font-bold mb-2">
+						<h2 className="text-xl font-bold mb-2 text-center">
 							{content.educationHeader}
 						</h2>
 						<ul className="list-disc ml-6 space-y-6">
@@ -42,7 +42,7 @@ export default function About() {
 				{/* Experience */}
 				<li className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 sm:p-6 flex flex-col md:flex-row items-center gap-4 sm:gap-6">
 					<div className="flex-1">
-						<h2 className="text-xl font-bold mb-2">
+						<h2 className="text-xl font-bold mb-2 text-center">
 							{content.experienceHeader}
 						</h2>
 						<ul className="list-disc ml-6 space-y-6">
@@ -86,7 +86,7 @@ export default function About() {
 				{/* Certifications */}
 				<li className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 sm:p-6 flex flex-col md:flex-row items-center gap-4 sm:gap-6">
 					<div className="flex-1">
-						<h2 className="text-xl font-bold mb-2">
+						<h2 className="text-xl font-bold mb-2 text-center">
 							{content.certificationsHeader}
 						</h2>
 						<ul className="list-disc ml-6 space-y-6">
@@ -144,7 +144,9 @@ export default function About() {
 				{/* Hobbies */}
 				<li className="bg-white dark:bg-neutral-900 rounded-lg shadow p-4 sm:p-6 flex flex-col md:flex-row items-center gap-4 sm:gap-6">
 					<div className="flex-1">
-						<h2 className="text-xl font-bold mb-2">{content.hobbiesHeader}</h2>
+						<h2 className="text-xl font-bold mb-2 text-center">
+							{content.hobbiesHeader}
+						</h2>
 						<ul className="list-disc ml-6 space-y-6">
 							<li className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
 								<div className="flex-1">
