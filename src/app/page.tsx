@@ -25,13 +25,19 @@ export default function Home() {
             href={PROJECT_LINKS.POWERLIFTING_CALENDAR}
             title={content.powerliftingCalendarTitle}
             description={content.powerliftingCalendarDescription}
-            tags={["React", "Next.js", "Python"]}
+            tags={["React", "Next.js", "Python", "Supabase"]}
           />
           <ProjectItem
             href={PROJECT_LINKS.DRAW_SOMETHING}
             title={content.drawSomethingTitle}
             description={content.drawSomethingDescription}
-            tags={["React", "Next.js"]}
+            tags={["React", "Next.js", "Supabase"]}
+          />
+          <ProjectItem
+            href={PROJECT_LINKS.PORTFOLIO} // TODO: Replace with Tic Tac Toe link
+            title={content.drawSomethingTitle}
+            description={content.drawSomethingDescription}
+            tags={["React", "Next.js", "Firebase"]}
           />
           <ProjectItem
             href={PROJECT_LINKS.PORTFOLIO}
