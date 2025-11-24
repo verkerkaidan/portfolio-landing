@@ -22,9 +22,9 @@ export default function Home() {
         </div>
         <ul className="space-y-4 w-full">
           <ProjectItem
-            href={PROJECT_LINKS.KNKF}
-            title={content.knkfTitle}
-            description={content.knkfDescription}
+            href={PROJECT_LINKS.POWERLIFTING_CALENDAR}
+            title={content.powerliftingCalendarTitle}
+            description={content.powerliftingCalendarDescription}
             tags={["React", "Next.js", "Python"]}
           />
           <ProjectItem

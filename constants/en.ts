@@ -2,8 +2,8 @@ import type { LanguageContent } from "./language.types";
 
 export const en: LanguageContent = {
   h1: "My projects",
-  knkfTitle: "Aidan's KNKF Calendar",
-  knkfDescription:
+  powerliftingCalendarTitle: "Aidan's KNKF Calendar",
+  powerliftingCalendarDescription:
     "A calendar that keeps track for me and sends me updates when upcoming KNKF Powerlifting competitions are scheduled.",
   drawSomethingTitle: "Draw Something",
   drawSomethingDescription:

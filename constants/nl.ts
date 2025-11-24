@@ -2,8 +2,8 @@ import type { LanguageContent } from "./language.types";
 
 export const nl: LanguageContent = {
   h1: "Mijn projecten",
-  knkfTitle: "Aidan's KNKF Kalender",
-  knkfDescription:
+  powerliftingCalendarTitle: "Aidan's KNKF Kalender",
+  powerliftingCalendarDescription:
     "Een kalender die voor mij bijhoudt en mij updates verstuurt wanneer de komende tijd KNKF-Powerlifting wedstrijden zijn.",
   drawSomethingTitle: "Draw Something",
   drawSomethingDescription:

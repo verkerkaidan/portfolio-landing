@@ -1,9 +1,11 @@
+import type { Language } from "../../constants/language.types";
+
 export default function LanguageSelect({
   lang,
   setLang,
 }: {
-  lang: "nl" | "en";
-  setLang: (lang: "nl" | "en") => void;
+  lang: Language;
+  setLang: (lang: Language) => void;
 }) {
   return (
     <div className="flex gap-2">
