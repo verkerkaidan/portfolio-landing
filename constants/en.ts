@@ -9,10 +9,14 @@ export const en: LanguageContent = {
   educationDescription:
     "In 2023 I started a program 'Informatica' at Hogeschool Leiden to learn about Software Engineering and discover whether this was for me or not. This being the case, I am excited to continue my studies here and graduate with a Bachelor's degree in 2027.",
   experienceHeader: "Experience",
-  experienceOdidoTitle: "Software Engineering Intern, Odido",
-  experienceOdidoPeriod: "Sept 2025 – Present",
-  experienceOdidoDescription:
+  odidoInternTitle: "Software Engineering Intern, Odido",
+  odidoInternDuration: "Sept 2025 – Febr 2026",
+  odidoInternExperienceDescription:
     "Developed scalable web applications as a Software Engineering Intern specialising in Frontend development. With a Research project dedicated to rendering-strategies, I learned a lot about different rendering-strategies and development. Odido gave me a chance to really collaborate with all kinds of teams and people, in order to deliver the best possible products.",
+  odidoParttimeTitle: "Software Engineering Working Student, Odido",
+  odidoParttimeDuration: "Febr 2026 – Present",
+  odidoParttimeExperienceDescription:
+    "After learning a lot during my internship period, Odido decided they want to keep me on part-time alongside the rest of my studies! Over the coming year I will work 16 hours per week in the React team on the website's frontend.",
   experienceAhTitle: "Retail Associate, Albert Heijn",
   experienceAhPeriod: "2019 – Present",
   experienceAhDescription:

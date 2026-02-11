@@ -9,10 +9,14 @@ export const nl: LanguageContent = {
   educationDescription:
     "In 2023 ben ik begonnen met de opleiding Informatica aan Hogeschool Leiden om meer te leren over Software Engineering en te ontdekken of dit bij mij past. Dat blijkt het geval te zijn, dus ik kijk ernaar uit om hier verder te leren en in 2027 mijn Bachelor te behalen.",
   experienceHeader: "Ervaring",
-  experienceOdidoTitle: "Software Engineering Stagiair, Odido",
-  experienceOdidoPeriod: "Sept 2025 – heden",
-  experienceOdidoDescription:
+  odidoInternTitle: "Software Engineering Stagiair, Odido",
+  odidoInternDuration: "Sept 2025 – Febr 2026",
+  odidoInternExperienceDescription:
     "Als Software Engineering Stagiair bij Odido heb ik schaalbare webapplicaties ontwikkeld, met een focus op Frontend. Tijdens een onderzoeksproject over render-strategieën heb ik veel geleerd over verschillende manieren van renderen en ontwikkeling. Odido gaf mij de kans om samen te werken met diverse teams en mensen, om zo de beste producten te leveren.",
+  odidoParttimeTitle: "Software Engineering Werkstudent, Odido",
+  odidoParttimeDuration: "Febr 2026 - heden",
+  odidoParttimeExperienceDescription:
+    "Na veel geleerd te hebben tijdens mijn stageperiode, heeft Odido besloten dat ze me - naast de rest van mijn studie - nog parttime willen houden! Het komende jaar werk ik 16 uur per week mee in het React team aan de frontend van de website.",
   experienceAhTitle: "Winkelmedewerker, Albert Heijn",
   experienceAhPeriod: "2019 – heden",
   experienceAhDescription:

@@ -7,9 +7,12 @@ export type LanguageContent = {
   educationSchool: string;
   educationDescription: string;
   experienceHeader: string;
-  experienceOdidoTitle: string;
-  experienceOdidoPeriod: string;
-  experienceOdidoDescription: string;
+  odidoInternTitle: string;
+  odidoInternDuration: string;
+  odidoInternExperienceDescription: string;
+  odidoParttimeTitle: string;
+  odidoParttimeDuration: string;
+  odidoParttimeExperienceDescription: string;
   experienceAhTitle: string;
   experienceAhPeriod: string;
   experienceAhDescription: string;

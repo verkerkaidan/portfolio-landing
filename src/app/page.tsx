@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Header from "../../components/Header/Header";
-import ProjectItem from "../../components/ProjectItem/ProjectItem";
+import ProjectsList from "../../components/ProjectItem/ProjectsList";
+import type { ProjectItemProps } from "../../components/ProjectItem/projectitem.types";
 import { en } from "../../constants/en";
 import type { Language } from "../../constants/language.types";
 import { nl } from "../../constants/nl";
@@ -11,29 +12,33 @@ export default function Home() {
   const [lang, setLang] = useState<Language>("en");
   const content = lang === "nl" ? nl : en;
 
+  const projects: ProjectItemProps[] = [
+    {
+      href: PROJECT_LINKS.POWERLIFTING_CALENDAR,
+      title: content.powerliftingCalendarTitle,
+      description: content.powerliftingCalendarDescription,
+      tags: ["React", "Next.js", "Python", "Supabase"],
+    },
+    {
+      href: PROJECT_LINKS.DRAW_SOMETHING,
+      title: content.drawSomethingTitle,
+      description: content.drawSomethingDescription,
+      tags: ["React", "Next.js", "Supabase"],
+    },
+    {
+      href: PROJECT_LINKS.PORTFOLIO,
+      title: content.portfolioTitle,
+      description: content.portfolioDescription,
+      tags: ["React", "Next.js"],
+    },
+  ];
+
   return (
     <>
       <Header title={content.projectsHeader} lang={lang} setLang={setLang} />
-      <ul className="space-y-4 w-full">
-        <ProjectItem
-          href={PROJECT_LINKS.POWERLIFTING_CALENDAR}
-          title={content.powerliftingCalendarTitle}
-          description={content.powerliftingCalendarDescription}
-          tags={["React", "Next.js", "Python", "Supabase"]}
-        />
-        <ProjectItem
-          href={PROJECT_LINKS.DRAW_SOMETHING}
-          title={content.drawSomethingTitle}
-          description={content.drawSomethingDescription}
-          tags={["React", "Next.js", "Supabase"]}
-        />
-        <ProjectItem
-          href={PROJECT_LINKS.PORTFOLIO}
-          title={content.portfolioTitle}
-          description={content.portfolioDescription}
-          tags={["React", "Next.js"]}
-        />
-      </ul>
+      <article className="w-full">
+        <ProjectsList projects={projects} />
+      </article>
     </>
   );
 }

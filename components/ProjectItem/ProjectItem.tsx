@@ -1,44 +1,40 @@
 import Link from "next/link";
+import type { ProjectItemProps } from "./projectitem.types";
+
+const TAG_COLORS = [
+  "bg-blue-100 text-blue-700 border border-blue-200",
+  "bg-emerald-100 text-emerald-700 border border-emerald-200",
+  "bg-purple-100 text-purple-700 border border-purple-200",
+  "bg-pink-100 text-pink-700 border border-pink-200",
+  "bg-amber-100 text-amber-700 border border-amber-200",
+  "bg-red-100 text-red-700 border border-red-200",
+  "bg-indigo-100 text-indigo-700 border border-indigo-200",
+];
 
 export default function ProjectItem({
   href,
   title,
   description,
   tags,
-}: {
-  href: string;
-  title: string;
-  description: string;
-  tags: string[];
-}) {
+}: ProjectItemProps) {
   return (
-    <Link href={href} className="block">
-      <li className="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-4 shadow hover:bg-zinc-200 dark:hover:bg-zinc-800 transition cursor-pointer font-medium text-lg">
-        <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-2">
+    <Link href={href} className="block group">
+      <li className="bg-white border border-slate-200 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-pointer">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
           {title}
         </h2>
-        <p>{description}</p>
-        <div className="flex gap-2 mt-2">
-          {tags.map((tag, idx) => {
-            const colors = [
-              "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-              "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-              "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-              "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
-              "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-              "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-              "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
-            ];
-            const colorClass = colors[idx % colors.length];
-            return (
-              <span
-                key={tag}
-                className={`inline-block px-2 py-1 rounded text-sm font-semibold ${colorClass}`}
-              >
-                {tag}
-              </span>
-            );
-          })}
+        <p className="text-slate-600 text-base md:text-lg mb-4 leading-relaxed">
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag, idx) => (
+            <span
+              key={tag}
+              className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${TAG_COLORS[idx % TAG_COLORS.length]} hover:shadow-sm transition-shadow duration-200`}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </li>
     </Link>
