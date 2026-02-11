@@ -64,7 +64,7 @@ export default function About() {
       description: content.hobbyPowerlifting,
     },
     {
-      title: "Dungeons &amp; Dragons",
+      title: "Dungeons & Dragons",
       description: content.hobbyDnD,
     },
     {

@@ -2,7 +2,7 @@ import type { LanguageContent } from "./language.types";
 
 export const nl: LanguageContent = {
   projectsHeader: "Mijn projecten",
-  aboutHeader: "Over mij",
+  aboutHeader: "Welkom! Ik ben Aidan.",
   educationHeader: "Opleiding",
   educationDegree: "HBO Bachelor Informatica",
   educationSchool: "Hogeschool Leiden — 2023–2027 (verwacht)",

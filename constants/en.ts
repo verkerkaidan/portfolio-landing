@@ -2,7 +2,7 @@ import type { LanguageContent } from "./language.types";
 
 export const en: LanguageContent = {
   projectsHeader: "My projects",
-  aboutHeader: "About me",
+  aboutHeader: "Welcome! I'm Aidan.",
   educationHeader: "Education",
   educationDegree: "HBO Bachelor of Computer Science",
   educationSchool: "Hogeschool Leiden — 2023–2027 (expected)",

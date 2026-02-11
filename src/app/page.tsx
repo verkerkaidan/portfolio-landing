@@ -20,12 +20,6 @@ export default function Home() {
       tags: ["React", "Next.js", "Python", "Supabase"],
     },
     {
-      href: PROJECT_LINKS.DRAW_SOMETHING,
-      title: content.drawSomethingTitle,
-      description: content.drawSomethingDescription,
-      tags: ["React", "Next.js", "Supabase"],
-    },
-    {
       href: PROJECT_LINKS.PORTFOLIO,
       title: content.portfolioTitle,
       description: content.portfolioDescription,

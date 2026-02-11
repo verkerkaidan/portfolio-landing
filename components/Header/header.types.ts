@@ -1,5 +1,4 @@
-import type { Language } from "../constants/language.types";
-
+import { Language } from "../../constants/language.types";
 export interface HeaderProps {
   title: string;
   lang: Language;
