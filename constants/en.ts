@@ -20,7 +20,7 @@ export const en: LanguageContent = {
   experienceAhTitle: "Retail Associate, Albert Heijn",
   experienceAhPeriod: "2019 – Present",
   experienceAhDescription:
-    "Over 6 years of customer-facing experience, demonstrating reliability, teamwork, and patience as a cashier in a fast-paced supermarket setting.",
+    "Over 7 years of customer-facing experience, demonstrating reliability, teamwork, and patience as a cashier in a fast-paced supermarket setting.",
   certificationsHeader: "Certifications",
   certificationReactTitle: "Udemy: React - The Complete Guide",
   certificationReactDescription:

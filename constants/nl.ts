@@ -20,7 +20,7 @@ export const nl: LanguageContent = {
   experienceAhTitle: "Winkelmedewerker, Albert Heijn",
   experienceAhPeriod: "2019 – heden",
   experienceAhDescription:
-    "Meer dan 6 jaar ervaring in klantcontact, waarbij ik betrouwbaarheid, teamwork en voornamelijk geduld heb getoond als servicemedewerker in een drukke supermarkt.",
+    "Meer dan 7 jaar ervaring in klantcontact, waarbij ik betrouwbaarheid, teamwork en voornamelijk geduld heb getoond als servicemedewerker in een drukke supermarkt.",
   certificationsHeader: "Certificaten",
   certificationReactTitle: "Udemy: React - The Complete Guide",
   certificationReactDescription:
