@@ -3,6 +3,11 @@ import type { LanguageContent } from "./language.types";
 export const en: LanguageContent = {
   projectsHeader: "My projects",
   aboutHeader: "Welcome! I'm Aidan.",
+  generalAboutHeader: "About Me",
+  generalAboutDescription:
+    "Hey! I’m Aidan. I’m a 24-year-old Computer Science student, powerlifter, D&D enthusiast, and gamer. In my current job, I work with React at Odido on customer-facing platforms. I also have project experience with Angular and Java Spring Boot, and right now I’m working on a school project to get a solid grasp of Go and apply it within a microservices architecture.",
+  contactHeader: "Contact Me",
+  contactDescription: "Email: aidanverkerk@icloud.com\nPhone: +31 6 48084353",
   educationHeader: "Education",
   educationDegree: "HBO Bachelor of Computer Science",
   educationSchool: "Hogeschool Leiden — 2023–2027 (expected)",

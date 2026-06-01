@@ -103,25 +103,58 @@ export default function Home() {
           NL
         </button>
       </div>
-      <ExperienceSection
-        experiences={experiences}
-        title={content.experienceHeader}
-      />
-      <EducationSection
-        title={content.educationHeader}
-        degree={content.educationDegree}
-        school={content.educationSchool}
-        description={content.educationDescription}
-      />
-      <CertificationsSection
-        certifications={certifications}
-        title={content.certificationsHeader}
-      />
-      <HobbiesSection
-        hobbies={hobbies}
-        title={content.hobbiesHeader}
-        images={hobbyImages}
-      />
+      <article className="w-full space-y-6 md:space-y-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-900">
+          {content.aboutHeader}
+        </h1>
+        <section className="rounded-xl bg-white border border-slate-200 p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <div
+              className="w-1 h-8 bg-slate-700 rounded-full"
+              aria-hidden="true"
+            ></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              {content.generalAboutHeader}
+            </h2>
+          </div>
+          <p className="text-slate-700 leading-relaxed">
+            {content.generalAboutDescription}
+          </p>
+        </section>
+        <ExperienceSection
+          experiences={experiences}
+          title={content.experienceHeader}
+        />
+        <EducationSection
+          title={content.educationHeader}
+          degree={content.educationDegree}
+          school={content.educationSchool}
+          description={content.educationDescription}
+        />
+        <CertificationsSection
+          certifications={certifications}
+          title={content.certificationsHeader}
+        />
+        <HobbiesSection
+          hobbies={hobbies}
+          title={content.hobbiesHeader}
+          images={hobbyImages}
+        />
+        <section className="rounded-xl bg-white border border-slate-200 p-6 md:p-8 shadow-sm">
+          <div className="flex items-center gap-3 mb-4">
+            <div
+              className="w-1 h-8 bg-blue-600 rounded-full"
+              aria-hidden="true"
+            ></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              {content.contactHeader}
+            </h2>
+          </div>
+          <p className="text-slate-700 leading-relaxed whitespace-pre-line">
+            {content.contactDescription}
+          </p>
+        </section>
+      </article>
     </main>
   );
 }

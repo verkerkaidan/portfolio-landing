@@ -3,6 +3,12 @@ import type { LanguageContent } from "./language.types";
 export const nl: LanguageContent = {
   projectsHeader: "Mijn projecten",
   aboutHeader: "Welkom! Ik ben Aidan.",
+  generalAboutHeader: "Over Mij",
+  generalAboutDescription:
+    "Hey! Ik ben Aidan. Ik ben een 24-jarige Informatica student, powerlifter, dnd'er, en gamer. In mijn huidige werk, werk ik in React bij Odido aan de klantenomgevingen, en verder heb ik wat projectervaring in Angular, Java Spring Boot en op dit moment ben ik bezig met een schoolproject om GO onder de knie te krijgen en deze te verwerken in een microservices architectuur.",
+  contactHeader: "Contact",
+  contactDescription:
+    "E-mail: aidanverkerk@icloud.com\nTelefoon: +31 6 48084353",
   educationHeader: "Opleiding",
   educationDegree: "HBO Bachelor Informatica",
   educationSchool: "Hogeschool Leiden — 2023–2027 (verwacht)",

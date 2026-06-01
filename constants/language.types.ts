@@ -2,6 +2,10 @@ export type Language = "nl" | "en";
 export type LanguageContent = {
   projectsHeader: string;
   aboutHeader: string;
+  generalAboutHeader: string;
+  generalAboutDescription: string;
+  contactHeader: string;
+  contactDescription: string;
   educationHeader: string;
   educationDegree: string;
   educationSchool: string;
