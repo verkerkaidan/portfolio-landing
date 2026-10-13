@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Projects & About",
+  title: "Aidan Verkerk — Frontend Developer",
   description:
-    "Explore my projects and learn more about me - a developer passionate about building modern web experiences.",
+    "Portfolio of Aidan Verkerk: frontend developer (React, Next.js, TypeScript) and Computer Science student at Hogeschool Leiden.",
 };
 
 export default function RootLayout({
@@ -26,11 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-linear-to-br from-slate-50 to-blue-50 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground antialiased`}
       >
-        <main className="flex min-h-screen w-full max-w-5xl flex-col items-start justify-start py-8 md:py-12 px-4 sm:px-6 md:px-8 mx-auto">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
