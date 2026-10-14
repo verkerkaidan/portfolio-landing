@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <Navbar nav={c.nav} lang={lang} setLang={changeLang} />
-      <main id="top" className="mx-auto max-w-4xl px-5 sm:px-8">
+      <main id="content" className="mx-auto max-w-4xl px-5 sm:px-8">
         <section className="py-16 md:py-28">
           <p className="mb-3 font-mono text-sm text-accent">
             {c.hero.greeting}
@@ -142,7 +142,14 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="mt-4 text-sm font-medium text-accent underline-offset-4 hover:underline"
                   >
-                    {p.linkLabel} ↗
+                    {p.linkLabel} <span aria-hidden="true">↗</span>
+                    <span className="sr-only">
+                      (
+                      {lang === "nl"
+                        ? "opent in een nieuw tabblad"
+                        : "opens in a new tab"}
+                      )
+                    </span>
                   </a>
                 )}
               </li>

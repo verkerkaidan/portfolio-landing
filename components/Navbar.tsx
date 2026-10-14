@@ -22,8 +22,11 @@ export default function Navbar({ nav, lang, setLang }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-10 border-b border-border bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex h-14 max-w-4xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="font-mono text-sm font-semibold">
+      <nav
+        aria-label="Main"
+        className="mx-auto flex h-14 max-w-4xl items-center justify-between px-5 sm:px-8"
+      >
+        <a href="#content" className="font-mono text-sm font-semibold">
           av<span className="text-accent">.</span>
         </a>
         <div className="flex items-center gap-5">
@@ -45,6 +48,7 @@ export default function Navbar({ nav, lang, setLang }: NavbarProps) {
                 key={code}
                 type="button"
                 aria-label={aria}
+                lang={code}
                 aria-pressed={lang === code}
                 onClick={() => setLang(code)}
                 className={`rounded px-2 py-1 transition-colors ${
@@ -59,6 +63,15 @@ export default function Navbar({ nav, lang, setLang }: NavbarProps) {
           </div>
         </div>
       </nav>
+      <ul className="mx-auto flex max-w-4xl gap-5 overflow-x-auto px-5 pb-3 text-sm text-muted sm:hidden">
+        {links.map((link) => (
+          <li key={link.href} className="shrink-0">
+            <a href={link.href} className="hover:text-foreground">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </header>
   );
 }
