@@ -71,7 +71,6 @@ export const ORG_LINKS = {
 
 export const CONTACT = {
   email: "aidanverkerk@icloud.com",
-  phone: "+31 6 48084353",
   linkedin: "https://nl.linkedin.com/in/aidanverkerk",
   github: "https://github.com/verkerkaidan",
 };
