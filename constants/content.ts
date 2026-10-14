@@ -3,6 +3,7 @@ export type Language = "nl" | "en";
 export interface ExperienceEntry {
   role: string;
   org: string;
+  orgHref?: string;
   period: string;
   stack?: string;
   bullets: string[];
@@ -33,6 +34,7 @@ export interface Content {
     role: string;
     summary: string;
     cta: string;
+    downloadCv: string;
     location: string;
   };
   experienceHeader: string;
@@ -45,6 +47,7 @@ export interface Content {
   education: {
     degree: string;
     school: string;
+    schoolHref: string;
     period: string;
     description: string;
   };
@@ -58,6 +61,11 @@ export interface Content {
 export const PROJECT_LINKS = {
   KOBO: "https://github.com/verkerkaidan/Kobo-Custom-Book-Cover-Background",
   FORTIUS: "https://lskvfortius.nl",
+};
+
+export const ORG_LINKS = {
+  ODIDO: "https://www.odido.nl",
+  HOGESCHOOL_LEIDEN: "https://www.hsleiden.nl",
 };
 
 export const CONTACT = {
@@ -93,6 +101,7 @@ export const en: Content = {
     summary:
       "I’m a 24-year-old student at Hogeschool Leiden. Alongside my studies I work 32 hours a week at Odido as a work-student software engineer, where I function as a junior frontend developer on the customer portals. Outside of code I’m a powerlifter and love tabletop games.",
     cta: "Get in touch",
+    downloadCv: "Download CV (Dutch)",
     location: "Alphen aan den Rijn, the Netherlands",
   },
   experienceHeader: "Experience",
@@ -100,6 +109,7 @@ export const en: Content = {
     {
       role: "Frontend Developer (Work Student)",
       org: "Odido Netherlands",
+      orgHref: ORG_LINKS.ODIDO,
       period: "Sept 2025 – Present",
       stack: "React / Next.js, Nest.js, communication, scrum",
       bullets: [
@@ -162,6 +172,7 @@ export const en: Content = {
   education: {
     degree: "HBO Computer Science",
     school: "Hogeschool Leiden",
+    schoolHref: ORG_LINKS.HOGESCHOOL_LEIDEN,
     period: "2023 – 2027",
     description:
       "Studying Computer Science since 2023, graduating in 2027 after a final graduation project.",
@@ -206,6 +217,7 @@ export const nl: Content = {
     summary:
       "Ik ben een 24-jarige student aan de Hogeschool Leiden. Naast mijn studie werk ik 32 uur per week bij Odido als werkstudent Software Engineer, waar ik effectief functioneer als junior frontend developer op de klantportalen. In mijn vrije tijd ben ik powerlifter en speel ik graag tabletop games.",
     cta: "Neem contact op",
+    downloadCv: "Download CV",
     location: "Alphen aan den Rijn, Nederland",
   },
   experienceHeader: "Ervaring",
@@ -213,6 +225,7 @@ export const nl: Content = {
     {
       role: "Frontend Developer (Werkstudent)",
       org: "Odido Nederland",
+      orgHref: ORG_LINKS.ODIDO,
       period: "sept 2025 – nu",
       stack: "React / Next.js, Nest.js, communicatie, scrum",
       bullets: [
@@ -275,6 +288,7 @@ export const nl: Content = {
   education: {
     degree: "HBO Informatica",
     school: "Hogeschool Leiden",
+    schoolHref: ORG_LINKS.HOGESCHOOL_LEIDEN,
     period: "2023 – 2027",
     description:
       "Sinds 2023 volg ik de opleiding Informatica. In 2027 studeer ik af, na afloop van een afstudeerproject.",

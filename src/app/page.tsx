@@ -5,17 +5,35 @@ import Section from "../../components/Section";
 import Tag from "../../components/Tag";
 import { CONTACT, en, type Language, nl } from "../../constants/content";
 
+const LANG_KEY = "lang";
+
 export default function Home() {
   const [lang, setLang] = useState<Language>("en");
   const c = lang === "nl" ? nl : en;
 
   useEffect(() => {
+    let saved: string | null = null;
+    try {
+      saved = localStorage.getItem(LANG_KEY);
+    } catch {}
+    if (saved === "nl" || saved === "en") setLang(saved);
+    else if (navigator.language.toLowerCase().startsWith("nl")) setLang("nl");
+  }, []);
+
+  useEffect(() => {
     document.documentElement.lang = c.htmlLang;
   }, [c.htmlLang]);
 
+  const changeLang = (next: Language) => {
+    setLang(next);
+    try {
+      localStorage.setItem(LANG_KEY, next);
+    } catch {}
+  };
+
   return (
     <>
-      <Navbar nav={c.nav} lang={lang} setLang={setLang} />
+      <Navbar nav={c.nav} lang={lang} setLang={changeLang} />
       <main id="content" className="mx-auto max-w-4xl px-5 sm:px-8">
         <section className="py-16 md:py-28">
           <p className="mb-3 font-mono text-sm text-accent">
@@ -34,6 +52,13 @@ export default function Home() {
               className="rounded-md bg-foreground px-4 py-2 font-medium text-background transition-opacity hover:opacity-80"
             >
               {c.hero.cta}
+            </a>
+            <a
+              href="/CV_Aidan_Verkerk.pdf"
+              download
+              className="rounded-md border border-border px-4 py-2 font-medium transition-colors hover:bg-surface"
+            >
+              {c.hero.downloadCv}
             </a>
             <a
               href={CONTACT.github}
@@ -58,7 +83,21 @@ export default function Home() {
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="text-lg font-semibold">
                     {job.role}
-                    <span className="font-normal text-muted"> · {job.org}</span>
+                    <span className="font-normal text-muted">
+                      {" · "}
+                      {job.orgHref ? (
+                        <a
+                          href={job.orgHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline-offset-4 hover:text-foreground hover:underline"
+                        >
+                          {job.org}
+                        </a>
+                      ) : (
+                        job.org
+                      )}
+                    </span>
                   </h3>
                   <span className="font-mono text-xs text-muted">
                     {job.period}
@@ -144,7 +183,15 @@ export default function Home() {
               {c.education.degree}
               <span className="font-normal text-muted">
                 {" "}
-                · {c.education.school}
+                ·{" "}
+                <a
+                  href={c.education.schoolHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 hover:text-foreground hover:underline"
+                >
+                  {c.education.school}
+                </a>
               </span>
             </h3>
             <span className="font-mono text-xs text-muted">
