@@ -5,17 +5,35 @@ import Section from "../../components/Section";
 import Tag from "../../components/Tag";
 import { CONTACT, en, type Language, nl } from "../../constants/content";
 
+const LANG_KEY = "lang";
+
 export default function Home() {
   const [lang, setLang] = useState<Language>("en");
   const c = lang === "nl" ? nl : en;
 
   useEffect(() => {
+    let saved: string | null = null;
+    try {
+      saved = localStorage.getItem(LANG_KEY);
+    } catch {}
+    if (saved === "nl" || saved === "en") setLang(saved);
+    else if (navigator.language.toLowerCase().startsWith("nl")) setLang("nl");
+  }, []);
+
+  useEffect(() => {
     document.documentElement.lang = c.htmlLang;
   }, [c.htmlLang]);
 
+  const changeLang = (next: Language) => {
+    setLang(next);
+    try {
+      localStorage.setItem(LANG_KEY, next);
+    } catch {}
+  };
+
   return (
     <>
-      <Navbar nav={c.nav} lang={lang} setLang={setLang} />
+      <Navbar nav={c.nav} lang={lang} setLang={changeLang} />
       <main id="top" className="mx-auto max-w-4xl px-5 sm:px-8">
         <section className="py-16 md:py-28">
           <p className="mb-3 font-mono text-sm text-accent">
