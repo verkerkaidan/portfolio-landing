@@ -36,6 +36,13 @@ export default function Home() {
               {c.hero.cta}
             </a>
             <a
+              href="/CV_Aidan_Verkerk.pdf"
+              download
+              className="rounded-md border border-border px-4 py-2 font-medium transition-colors hover:bg-surface"
+            >
+              {c.hero.downloadCv}
+            </a>
+            <a
               href={CONTACT.github}
               className="text-muted underline-offset-4 hover:text-foreground hover:underline"
             >

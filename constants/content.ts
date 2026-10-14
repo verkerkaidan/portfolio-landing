@@ -33,6 +33,7 @@ export interface Content {
     role: string;
     summary: string;
     cta: string;
+    downloadCv: string;
     location: string;
   };
   experienceHeader: string;
@@ -93,6 +94,7 @@ export const en: Content = {
     summary:
       "I’m a 24-year-old student at Hogeschool Leiden. Alongside my studies I work 32 hours a week at Odido as a work-student software engineer, where I function as a junior frontend developer on the customer portals. Outside of code I’m a powerlifter and love tabletop games.",
     cta: "Get in touch",
+    downloadCv: "Download CV (Dutch)",
     location: "Alphen aan den Rijn, the Netherlands",
   },
   experienceHeader: "Experience",
@@ -206,6 +208,7 @@ export const nl: Content = {
     summary:
       "Ik ben een 24-jarige student aan de Hogeschool Leiden. Naast mijn studie werk ik 32 uur per week bij Odido als werkstudent Software Engineer, waar ik effectief functioneer als junior frontend developer op de klantportalen. In mijn vrije tijd ben ik powerlifter en speel ik graag tabletop games.",
     cta: "Neem contact op",
+    downloadCv: "Download CV",
     location: "Alphen aan den Rijn, Nederland",
   },
   experienceHeader: "Ervaring",
