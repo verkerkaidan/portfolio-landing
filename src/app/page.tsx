@@ -226,10 +226,10 @@ export default function Home() {
               {CONTACT.email}
             </a>
             <a
-              href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+              href={CONTACT.linkedin}
               className="text-muted underline-offset-4 hover:text-foreground hover:underline"
             >
-              {CONTACT.phone}
+              LinkedIn
             </a>
           </div>
         </Section>
