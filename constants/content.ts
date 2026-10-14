@@ -37,6 +37,7 @@ export interface Content {
     downloadCv: string;
     cvHref: string;
     location: string;
+    status: string;
   };
   experienceHeader: string;
   experience: ExperienceEntry[];
@@ -104,6 +105,7 @@ export const en: Content = {
     downloadCv: "Download CV",
     cvHref: "/CV_Aidan_Verkerk_EN.pdf",
     location: "Alphen aan den Rijn, the Netherlands",
+    status: "Looking for a graduation internship",
   },
   experienceHeader: "Experience",
   experience: [
@@ -221,6 +223,7 @@ export const nl: Content = {
     downloadCv: "Download CV",
     cvHref: "/CV_Aidan_Verkerk_NL.pdf",
     location: "Alphen aan den Rijn, Nederland",
+    status: "Op zoek naar een afstudeerstage",
   },
   experienceHeader: "Ervaring",
   experience: [

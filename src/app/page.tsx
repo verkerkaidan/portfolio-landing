@@ -46,6 +46,13 @@ export default function Home() {
           <p className="mt-8 max-w-2xl text-lg leading-relaxed">
             {c.hero.summary}
           </p>
+          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-sm">
+            <span
+              aria-hidden="true"
+              className="size-2 rounded-full bg-emerald-500"
+            />
+            {c.hero.status}
+          </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
             <a
               href="#contact"
