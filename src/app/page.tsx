@@ -65,7 +65,21 @@ export default function Home() {
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="text-lg font-semibold">
                     {job.role}
-                    <span className="font-normal text-muted"> · {job.org}</span>
+                    <span className="font-normal text-muted">
+                      {" · "}
+                      {job.orgHref ? (
+                        <a
+                          href={job.orgHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline-offset-4 hover:text-foreground hover:underline"
+                        >
+                          {job.org}
+                        </a>
+                      ) : (
+                        job.org
+                      )}
+                    </span>
                   </h3>
                   <span className="font-mono text-xs text-muted">
                     {job.period}
@@ -144,7 +158,15 @@ export default function Home() {
               {c.education.degree}
               <span className="font-normal text-muted">
                 {" "}
-                · {c.education.school}
+                ·{" "}
+                <a
+                  href={c.education.schoolHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 hover:text-foreground hover:underline"
+                >
+                  {c.education.school}
+                </a>
               </span>
             </h3>
             <span className="font-mono text-xs text-muted">
