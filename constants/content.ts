@@ -175,7 +175,7 @@ export const en: Content = {
     {
       title: "Tabletop games",
       description:
-        "A Dungeons & Dragons campaign with friends, running since 2020.",
+        "A Dungeons & Dragons campaign with friends, running since 2020. For the past few months I’ve also been dabbling in Call of Cthulhu.",
     },
     {
       title: "Gaming",
@@ -288,7 +288,7 @@ export const nl: Content = {
     {
       title: "Tabletop games",
       description:
-        "Een Dungeons & Dragons-campagne met vrienden, lopend sinds 2020.",
+        "Een Dungeons & Dragons-campagne met vrienden, lopend sinds 2020. Sinds een paar maanden speel ik ook Call of Cthulhu.",
     },
     {
       title: "Gamen",
