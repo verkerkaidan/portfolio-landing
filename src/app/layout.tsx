@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "./site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Aidan Verkerk — Frontend Developer",
   description:
     "Portfolio of Aidan Verkerk: frontend developer (React, Next.js, TypeScript) and Computer Science student at Hogeschool Leiden.",
+  openGraph: {
+    title: "Aidan Verkerk — Frontend Developer",
+    description:
+      "React, Next.js and TypeScript developer and Computer Science student at Hogeschool Leiden.",
+    type: "website",
+    locale: "en_US",
+    alternateLocale: "nl_NL",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
