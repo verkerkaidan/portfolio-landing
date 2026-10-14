@@ -3,6 +3,7 @@ export type Language = "nl" | "en";
 export interface ExperienceEntry {
   role: string;
   org: string;
+  orgHref?: string;
   period: string;
   stack?: string;
   bullets: string[];
@@ -45,6 +46,7 @@ export interface Content {
   education: {
     degree: string;
     school: string;
+    schoolHref: string;
     period: string;
     description: string;
   };
@@ -58,6 +60,11 @@ export interface Content {
 export const PROJECT_LINKS = {
   KOBO: "https://github.com/verkerkaidan/Kobo-Custom-Book-Cover-Background",
   FORTIUS: "https://lskvfortius.nl",
+};
+
+export const ORG_LINKS = {
+  ODIDO: "https://www.odido.nl",
+  HOGESCHOOL_LEIDEN: "https://www.hsleiden.nl",
 };
 
 export const CONTACT = {
@@ -100,6 +107,7 @@ export const en: Content = {
     {
       role: "Frontend Developer (Work Student)",
       org: "Odido Netherlands",
+      orgHref: ORG_LINKS.ODIDO,
       period: "Sept 2025 – Present",
       stack: "React / Next.js, Nest.js, communication, scrum",
       bullets: [
@@ -162,6 +170,7 @@ export const en: Content = {
   education: {
     degree: "HBO Computer Science",
     school: "Hogeschool Leiden",
+    schoolHref: ORG_LINKS.HOGESCHOOL_LEIDEN,
     period: "2023 – 2027",
     description:
       "Studying Computer Science since 2023, graduating in 2027 after a final graduation project.",
@@ -213,6 +222,7 @@ export const nl: Content = {
     {
       role: "Frontend Developer (Werkstudent)",
       org: "Odido Nederland",
+      orgHref: ORG_LINKS.ODIDO,
       period: "sept 2025 – nu",
       stack: "React / Next.js, Nest.js, communicatie, scrum",
       bullets: [
@@ -275,6 +285,7 @@ export const nl: Content = {
   education: {
     degree: "HBO Informatica",
     school: "Hogeschool Leiden",
+    schoolHref: ORG_LINKS.HOGESCHOOL_LEIDEN,
     period: "2023 – 2027",
     description:
       "Sinds 2023 volg ik de opleiding Informatica. In 2027 studeer ik af, na afloop van een afstudeerproject.",
